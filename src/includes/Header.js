@@ -27,7 +27,7 @@ export default function Header() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-      <ListItem key={'Dashboard'} disablePadding>
+      <ListItem key={'Dashboard'} disablePadding selected={true}>
           <ListItemButton>
             <ListItemIcon>
               <DashboardIcon />
@@ -64,7 +64,7 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            My Project
           </Typography>
           <Drawer open={open} onClose={toggleDrawer(false)}>
             {DrawerList}
