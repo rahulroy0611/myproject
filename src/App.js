@@ -9,7 +9,7 @@ export default function App () {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path="/" element={<Layout />}>
+        <Route index path="/" element={<Dashboard />}>
         </Route>
       </Routes>
     </BrowserRouter>
