@@ -40,6 +40,14 @@ export default function Header() {
       </List>
       <Divider />
       <List>
+        <ListItem>
+          <ListItemButton>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Integration" />
+          </ListItemButton>
+        </ListItem>
         {['Integration', 'Menu 1', 'Menu 2'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
