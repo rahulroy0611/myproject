@@ -49,7 +49,6 @@ export default function Header() {
             <ListItemText primary="Integration" />
           </ListItemButton>
         </ListItem>
-        ))}
       </List>
     </Box>
   );
