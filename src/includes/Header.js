@@ -12,8 +12,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructionsIcon';
-import DashboardIcon from '@mui/icons-material/DashboardIcon';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 
 export default function Header() {
