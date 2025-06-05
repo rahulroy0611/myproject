@@ -12,7 +12,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import {IntegrationInstructionsIcon,DashboardIcon} from '@mui/icons-material/IntegrationInstructions';
+import {IntegrationInstructionsIcon, DashboardIcon} from '@mui/icons-material';
 
 
 export default function Header() {
