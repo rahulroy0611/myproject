@@ -41,7 +41,7 @@ export default function Header() {
       </List>
       <Divider />
       <List>
-        <ListItem>
+        <ListItem key={'Integration'} disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <IntegrationInstructionsIcon />
