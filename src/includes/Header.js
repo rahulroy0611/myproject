@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 
 
 export default function Header() {
@@ -43,20 +44,11 @@ export default function Header() {
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <IntegrationInstructionsIcon />
             </ListItemIcon>
             <ListItemText primary="Integration" />
           </ListItemButton>
         </ListItem>
-        {['Integration', 'Menu 1', 'Menu 2'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
         ))}
       </List>
     </Box>
