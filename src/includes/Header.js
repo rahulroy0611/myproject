@@ -72,7 +72,7 @@ export default function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             My Project
           </Typography>
-          <Badge badgeContent={4} color="primary">
+          <Badge badgeContent={4} color="danger">
             <MailIcon color="action" />
           </Badge>
           <Drawer open={open} onClose={toggleDrawer(false)}>
