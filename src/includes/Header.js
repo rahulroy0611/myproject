@@ -15,7 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { Link } from 'react-router-dom';
-import Badge from '@mui/material';
+import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 
 export default function Header() {
