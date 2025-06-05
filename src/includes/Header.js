@@ -14,6 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -27,25 +28,29 @@ export default function Header() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-      <ListItem key={'Dashboard'} disablePadding>
-          <ListItemButton selected={true}>
-            <ListItemIcon>
-              <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Dashboard" />
-          </ListItemButton>
-        </ListItem>
+        <Link to="/dashboard" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem key={'Dashboard'} disablePadding>
+            <ListItemButton selected={true}>
+              <ListItemIcon>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
-        <ListItem key={'Integration'} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <IntegrationInstructionsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Integration" />
-          </ListItemButton>
-        </ListItem>
+        <Link to="/integration" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem key={'Integration'} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <IntegrationInstructionsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Integration" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
       </List>
     </Box>
   );
