@@ -15,7 +15,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { Link } from 'react-router-dom';
-
+import Badge from '@mui/material';
+import MailIcon from '@mui/icons-material/Mail';
 
 export default function Header() {
 
@@ -30,7 +31,7 @@ export default function Header() {
       <List>
         <Link to="/dashboard" style={{ textDecoration: 'none', color: 'inherit' }}>
           <ListItem key={'Dashboard'} disablePadding>
-            <ListItemButton selected={true}>
+            <ListItemButton>
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
@@ -71,6 +72,9 @@ export default function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             My Project
           </Typography>
+          <Badge badgeContent={4} color="primary">
+            <MailIcon color="action" />
+          </Badge>
           <Drawer open={open} onClose={toggleDrawer(false)}>
             {DrawerList}
           </Drawer>
