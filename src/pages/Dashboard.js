@@ -5,7 +5,7 @@ function Dashboard() {
   return (
     <div className="Dashboard">
       <Header />
-      <h1>Dashboard</h1>
+      <h1>Dashboard from NSDC</h1>
     </div>
   );
 }
