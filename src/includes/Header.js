@@ -73,7 +73,7 @@ export default function Header() {
             My Project
           </Typography>
           <Badge badgeContent={4} color="success">
-            <MailIcon color="action" />
+            <MailIcon color="red[400]" />
           </Badge>
           <Drawer open={open} onClose={toggleDrawer(false)}>
             {DrawerList}
