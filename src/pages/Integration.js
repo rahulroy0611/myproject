@@ -168,7 +168,7 @@ function Integration() {
                 </CardActions>
               </Card>
           </Grid>
-          <Grid size={4}>{/* <Item>size=4</Item> */}</Grid>
+          
         </Grid>
       </Box>
     </div>
