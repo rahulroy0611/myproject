@@ -1,22 +1,12 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
+import {Box,Drawer,List,Divider,ListItem,ListItemButton,ListItemIcon,ListItemText,AppBar,Toolbar,Typography,IconButton,Badge} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { Link } from 'react-router-dom';
-import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 
 export default function Header() {
 
@@ -58,7 +48,7 @@ export default function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: '#263238' }}>
         <Toolbar>
           <IconButton onClick={toggleDrawer(true)}
             size="large"
@@ -69,12 +59,34 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
+          
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             My Project
           </Typography>
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon color="action" />
-          </Badge>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+              <Badge badgeContent={4} color="error">
+                <MailIcon />
+              </Badge>
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"
+            >
+              <Badge badgeContent={17} color="error">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+          </Box>
           <Drawer open={open} onClose={toggleDrawer(false)}>
             {DrawerList}
           </Drawer>
