@@ -38,7 +38,7 @@ function Integration() {
                     alt="AWS Logo"
                     sx={{ objectFit: 'contain', height: 140}}
                   />
-                  <CardContent>
+                  {/* <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       AWS
                     </Typography>
@@ -48,15 +48,15 @@ function Integration() {
                     >
                       This card provides a user-friendly interface where users can initiate the AWS integration process by entering their credentials or connecting through a secure API. It serves as the entry point for enabling AWS-based features within the application.
                     </Typography>
-                  </CardContent>
+                  </CardContent> */}
                 </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     Configure
                   </Button>
-                  <Button size="small" color="success" disabled>
+                  {/* <Button size="small" color="success" disabled>
                     Enable
-                  </Button>
+                  </Button> */}
                   <Button size="small" color="error" disabled>
                     Disabled
                   </Button>
@@ -73,7 +73,7 @@ function Integration() {
                     alt="Azure Logo"
                     sx={{ objectFit: 'contain', height: 140}}
                   />
-                  <CardContent>
+                  {/* <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       Azure
                     </Typography>
@@ -83,15 +83,15 @@ function Integration() {
                     >
                       This card provides a user-friendly interface where users can initiate the Azure integration process by entering their credentials or connecting through a secure API. It serves as the entry point for enabling AWS-based features within the application.
                     </Typography>
-                  </CardContent>
+                  </CardContent> */}
                 </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     Configure
                   </Button>
-                  <Button size="small" color="success" disabled>
+                  {/* <Button size="small" color="success" disabled>
                     Enable
-                  </Button>
+                  </Button> */}
                   <Button size="small" color="error" disabled>
                     Disabled
                   </Button>
@@ -108,7 +108,7 @@ function Integration() {
                     alt="GCP Logo"
                     sx={{ objectFit: 'contain', height: 140}}
                   />
-                  <CardContent>
+                  {/* <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       Azure
                     </Typography>
@@ -118,17 +118,17 @@ function Integration() {
                     >
                       This card provides a user-friendly interface where users can initiate the GCP integration process by entering their credentials or connecting through a secure API. It serves as the entry point for enabling AWS-based features within the application.
                     </Typography>
-                  </CardContent>
+                  </CardContent> */}
                 </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     Configure
                   </Button>
-                  <Button size="small" color="success" disabled>
+                  {/* <Button size="small" color="success" disabled>
                     Enable
-                  </Button>
+                  </Button> */}
                   <Button size="small" color="error" disabled>
-                    Disabled
+                    Disable
                   </Button>
                 </CardActions>
               </Card>
@@ -143,7 +143,7 @@ function Integration() {
                     alt="WAZUH Logo"
                     sx={{ objectFit: 'contain', height: 140}}
                   />
-                  <CardContent>
+                  {/* <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       Wazuh
                     </Typography>
@@ -153,17 +153,14 @@ function Integration() {
                     >
                       This card provides a user-friendly interface where users can initiate the Wazuh integration process by entering their credentials or connecting through a secure API. It serves as the entry point for enabling AWS-based features within the application.
                     </Typography>
-                  </CardContent>
+                  </CardContent> */}
                 </CardActionArea>
-                <CardActions>
+                <CardActions sx={{ padding: 1 }}>
                   <Button size="small" color="primary">
                     Configure
                   </Button>
-                  <Button size="small" color="success" disabled>
-                    Enable
-                  </Button>
                   <Button size="small" color="error" disabled>
-                    Disabled
+                    Disable
                   </Button>
                 </CardActions>
               </Card>
