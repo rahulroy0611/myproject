@@ -1,28 +1,29 @@
 import * as React from "react";
 import Header from "../includes/Header.js";
-import { Grid, Box, Paper } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Grid, Box } from "@mui/material";
+// import { Paper } from "@mui/material";
+// import { styled } from "@mui/material/styles";
 import {
   Card,
-  CardContent,
-  Typography,
   CardMedia,
   Button,
   CardActionArea,
   CardActions,
 } from "@mui/material";
+import { Link } from 'react-router-dom';
+
 
 function Integration() {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: (theme.vars ?? theme).palette.text.secondary,
-    ...theme.applyStyles("dark", {
-      backgroundColor: "#1A2027",
-    }),
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: "#fff",
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: (theme.vars ?? theme).palette.text.secondary,
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "#1A2027",
+  //   }),
+  // }));
   return (
     <div className="Integration">
       <Header />
@@ -51,9 +52,11 @@ function Integration() {
                   </CardContent> */}
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    Configure
-                  </Button>
+                  <Link to="/configaws" style={{ textDecoration: 'none', color: 'inherit' }}> 
+                    <Button size="small" color="primary">
+                      Configure
+                    </Button>
+                  </Link>
                   {/* <Button size="small" color="success" disabled>
                     Enable
                   </Button> */}
@@ -86,9 +89,11 @@ function Integration() {
                   </CardContent> */}
                 </CardActionArea>
                 <CardActions>
+                  <Link to="/configazure" style={{ textDecoration: 'none', color: 'inherit' }}> 
                   <Button size="small" color="primary">
                     Configure
                   </Button>
+                  </Link>
                   {/* <Button size="small" color="success" disabled>
                     Enable
                   </Button> */}
@@ -121,9 +126,11 @@ function Integration() {
                   </CardContent> */}
                 </CardActionArea>
                 <CardActions>
+                  <Link to="/configgcp" style={{ textDecoration: 'none', color: 'inherit' }}> 
                   <Button size="small" color="primary">
                     Configure
                   </Button>
+                  </Link>
                   {/* <Button size="small" color="success" disabled>
                     Enable
                   </Button> */}
@@ -156,9 +163,11 @@ function Integration() {
                   </CardContent> */}
                 </CardActionArea>
                 <CardActions sx={{ padding: 1 }}>
+                  <Link to="/configwazuh" style={{ textDecoration: 'none', color: 'inherit' }}> 
                   <Button size="small" color="primary">
                     Configure
                   </Button>
+                  </Link>
                   <Button size="small" color="error" disabled>
                     Disable
                   </Button>

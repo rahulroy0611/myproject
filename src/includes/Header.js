@@ -3,6 +3,7 @@ import {Box,Drawer,List,Divider,ListItem,ListItemButton,ListItemIcon,ListItemTex
 import MenuIcon from '@mui/icons-material/Menu';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import DevicesIcon from '@mui/icons-material/Devices';
 import { Link } from 'react-router-dom';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -20,13 +21,25 @@ export default function Header() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        <Link to="/dashboard" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <ListItem key={'Dashboard'} disablePadding>
+        <Link to="/overview" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem key={'Overview'} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" />
+              <ListItemText primary="Overview" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+      </List>
+      <List>
+        <Link to="/assetinventory" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem key={'AssetInventory'} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <DevicesIcon />
+              </ListItemIcon>
+              <ListItemText primary="Asset Inventory" />
             </ListItemButton>
           </ListItem>
         </Link>
