@@ -152,19 +152,22 @@ function createData (account_id,id,instance_type,instance_state,private_ip,publi
 export default function EC2details() {
     return (
         <div className="ConfigAWS">
-            <Header />
-            <div style={{ padding: "5px" }}>
-                <Paper sx={{ width: "100%", overflow: "hidden", padding: "10px" }}>
-                    <DataGrid
-                        rows={rows}
-                        columns={columns}
-                        initialState={{ pagination: { paginationModel } }}
-                        pageSizeOptions={[5, 10, 50, 100]}
-                        checkboxSelection
-                        sx={{ border: 0 }}
-                    />
-                </Paper>
-            </div>
-        </div>
+      <Header />
+      <div style={{ padding: "10px" }}>
+        
+        {/* Additional content can be added here */}
+
+        <Paper sx={{ width: "100%", overflow: "hidden" }}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            initialState={{ pagination: { paginationModel } }}
+            pageSizeOptions={[5, 10, 50, 100]}
+            checkboxSelection
+            sx={{ border: 0 }}
+          />
+        </Paper>
+      </div>
+    </div>
     );
 }
