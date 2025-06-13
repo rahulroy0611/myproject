@@ -154,7 +154,7 @@ export default function EC2details() {
         <div className="ConfigAWS">
             <Header />
             <div style={{ padding: "5px" }}>
-                <Paper sx={{ width: "100%", overflow: "hidden" }}>
+                <Paper sx={{ width: "100%", overflow: "hidden", padding: "10px" }}>
                     <DataGrid
                         rows={rows}
                         columns={columns}
