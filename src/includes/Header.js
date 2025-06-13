@@ -44,6 +44,18 @@ export default function Header() {
           </ListItem>
         </Link>
       </List>
+      <List>
+        <Link to="/security" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem key={'Security'} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <DevicesIcon />
+              </ListItemIcon>
+              <ListItemText primary="Security" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+      </List>
       <Divider />
       <List>
         <Link to="/integration" style={{ textDecoration: 'none', color: 'inherit' }}>
