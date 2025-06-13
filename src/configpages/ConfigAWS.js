@@ -13,7 +13,7 @@ import AddIcon from "@mui/icons-material/Add";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Switch from "@mui/material";
+import Switch from '@mui/material/Switch';
 
 const columns = [
   { id: "id", label: "Account ID", minWidth: 170, align: "left" },
