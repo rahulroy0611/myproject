@@ -29,8 +29,8 @@ const columns = [
   { id: "actions", label: "Actions", minWidth: 170, align: "left" },
 ];
 
-function createData(id, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions) {
-  return { id, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions };
+function createData(id, name, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions) {
+  return { id, name, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions };
 }
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
