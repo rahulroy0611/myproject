@@ -11,7 +11,7 @@ const columns = [
         align: "left"
     },
     {
-        field: "instance_id",
+        field: "id",
         headerName: "Instance ID",
         width: 170,
         align: "left"
