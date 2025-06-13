@@ -3,10 +3,6 @@ import Paper from "@mui/material/Paper";
 import { Grid, Box, Button } from "@mui/material";
 import Header from "../includes/Header.js";
 import AddIcon from "@mui/icons-material/Add";
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Switch from '@mui/material/Switch';
 import { DataGrid } from '@mui/x-data-grid';
 
 
