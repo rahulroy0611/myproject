@@ -127,88 +127,88 @@ export default function AssetInventory() {
   return (
     <div class="AssetInventory">
       <Header />
-        <div style={{ padding: "10px" }}>
-      <Box sx={{ mt: 4, display: "flex", gap: 2 }}>
-        <Select value={cloud} onChange={(e) => setCloud(e.target.value)} sx={{ minWidth: 120 }}>
-          <MenuItem value="AWS">AWS</MenuItem>
-          <MenuItem value="Azure">Azure</MenuItem>
-          <MenuItem value="GCP">GCP</MenuItem>
-        </Select>
-      </Box>
+      <div style={{ padding: "5px" }}>
+        <Box sx={{ mt: 4, display: "flex", gap: 2 }}>
+          <Select value={cloud} onChange={(e) => setCloud(e.target.value)} sx={{ minWidth: 120 }}>
+            <MenuItem value="AWS">AWS</MenuItem>
+            <MenuItem value="Azure">Azure</MenuItem>
+            <MenuItem value="GCP">GCP</MenuItem>
+          </Select>
+        </Box>
 
-      {/* Asset Cards */}
-      <Link to="/ec2details" style={{ textDecoration: "none" }}>
-      <Grid container spacing={3} sx={{ mt: 2 }}>
-        {getAssets().map((asset, index) => (
-          <Grid item xs={12} md={6} lg={4} key={index}>
-            <Card variant="outlined">
-              <CardHeader
-                title={asset.name}
-                action={<img src={asset.logo} alt="logo" width={28} height={28} />}
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary">
-                  {asset.region} • Tag: {asset.tag} • Risk: 🔥 {asset.risk}
-                </Typography>
-                <Typography variant="caption" color="primary">
-                  Last Sync: few mins ago
-                </Typography>
-              </CardContent>
-            </Card>
+        {/* Asset Cards */}
+        <Link to="/ec2details" style={{ textDecoration: "none" }}>
+          <Grid container spacing={3} sx={{ mt: 2 }}>
+            {getAssets().map((asset, index) => (
+              <Grid item xs={12} md={6} lg={4} key={index}>
+                <Card variant="outlined">
+                  <CardHeader
+                    title={asset.name}
+                    action={<img src={asset.logo} alt="logo" width={28} height={28} />}
+                  />
+                  <CardContent>
+                    <Typography variant="body2" color="textSecondary">
+                      {asset.region} • Tag: {asset.tag} • Risk: 🔥 {asset.risk}
+                    </Typography>
+                    <Typography variant="caption" color="primary">
+                      Last Sync: few mins ago
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-      </Link>
+        </Link>
 
-      <Divider sx={{ my: 5 }} />
+        <Divider sx={{ my: 5 }} />
 
-      {/* Analytics Section */}
-      <Grid container spacing={4} sx={{ display: "flex", justifyContent: "center" }}>
-        <Grid item size={4} md={6}>
-          <Paper sx={{ p: 3, height: 400 }}>
-            <Typography variant="h6" gutterBottom>
-              Assets by Type
-            </Typography>
-            <ResponsiveContainer width="100%" height="90%">
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  cx="50%"
-                  cy="50%"
-                  outerRadius={100}
-                  dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                >
-                  {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
-          </Paper>
+        {/* Analytics Section */}
+        <Grid container spacing={4} sx={{ display: "flex", justifyContent: "center" }}>
+          <Grid item size={4} md={6}>
+            <Paper sx={{ p: 3, height: 400 }}>
+              <Typography variant="h6" gutterBottom>
+                Assets by Type
+              </Typography>
+              <ResponsiveContainer width="100%" height="90%">
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={100}
+                    dataKey="value"
+                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </Paper>
+          </Grid>
+
+          <Grid item size={4} md={6}>
+            <Paper sx={{ p: 3, height: 400 }}>
+              <Typography variant="h6" gutterBottom>
+                Cloud Provider Asset Comparison
+              </Typography>
+              <ResponsiveContainer width="100%" height="90%">
+                <BarChart data={barData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="type" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="AWS" fill="#8884d8" />
+                  <Bar dataKey="Azure" fill="#82ca9d" />
+                  <Bar dataKey="GCP" fill="#ffc658" />
+                </BarChart>
+              </ResponsiveContainer>
+            </Paper>
+          </Grid>
         </Grid>
-
-        <Grid item size={4} md={6}>
-          <Paper sx={{ p: 3, height: 400 }}>
-            <Typography variant="h6" gutterBottom>
-              Cloud Provider Asset Comparison
-            </Typography>
-            <ResponsiveContainer width="100%" height="90%">
-              <BarChart data={barData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="type" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="AWS" fill="#8884d8" />
-                <Bar dataKey="Azure" fill="#82ca9d" />
-                <Bar dataKey="GCP" fill="#ffc658" />
-              </BarChart>
-            </ResponsiveContainer>
-          </Paper>
-        </Grid>
-      </Grid>
       </div>
     </div>
   );

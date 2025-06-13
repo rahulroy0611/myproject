@@ -8,6 +8,7 @@ import ConfigAWS from './configpages/ConfigAWS.js';
 import ConfigAzure from './configpages/ConfigAzure.js';
 import ConfigGCP from './configpages/ConfigGCP.js';
 import ConfigWazuh from './configpages/ConfigWazuh.js';
+import EC2details from './pages/EC2details.js';
 
 export default function App () {
   return (
@@ -21,6 +22,7 @@ export default function App () {
         <Route path="/configazure" element={<ConfigAzure />} />
         <Route path="/configgcp" element={<ConfigGCP />} />
         <Route path="/configwazuh" element={<ConfigWazuh />} />
+        <Route path="/ec2details" element={<EC2details />} />
         <Route path="/*" element={<Overview />} />
       </Routes>
     </Router>

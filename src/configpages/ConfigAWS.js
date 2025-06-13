@@ -28,8 +28,6 @@ function createData(id, name, type, group, status,last_modify_by, account_owner,
   return { id, name, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions };
 }
 
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
-
 const rows = [
   createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", "Enabled/Disabled", "Edit"),
   createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", "Enabled/Disabled", "Edit"),
