@@ -26,6 +26,7 @@ import {
   Legend,
 } from "recharts";
 import Header from "../includes/Header";
+import { Link } from 'react-router-dom';
 
 const awsAssets = [
   {
@@ -136,6 +137,7 @@ export default function AssetInventory() {
       </Box>
 
       {/* Asset Cards */}
+      <Link to="/ec2details" style={{ textDecoration: "none" }}>
       <Grid container spacing={3} sx={{ mt: 2 }}>
         {getAssets().map((asset, index) => (
           <Grid item xs={12} md={6} lg={4} key={index}>
@@ -156,6 +158,7 @@ export default function AssetInventory() {
           </Grid>
         ))}
       </Grid>
+      </Link>
 
       <Divider sx={{ my: 5 }} />
 
