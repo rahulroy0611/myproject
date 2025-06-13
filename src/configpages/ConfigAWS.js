@@ -1,12 +1,5 @@
 import * as React from "react";
 import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
-import TableRow from "@mui/material/TableRow";
 import { Grid, Box, Button } from "@mui/material";
 import Header from "../includes/Header.js";
 import AddIcon from "@mui/icons-material/Add";
@@ -38,47 +31,14 @@ function createData(id, name, type, group, status,last_modify_by, account_owner,
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 const rows = [
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
-  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
+  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", "Enabled/Disabled", "Edit"),
+  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", "Enabled/Disabled", "Edit"),
+  createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", "Enabled/Disabled", "Edit"),
 ];
 
 const paginationModel = { page: 0, pageSize: 5 };
 
 export default function ConfigAWS() {
-  // const [page, setPage] = React.useState(0);
-  // const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
-  // const handleChangePage = (event, newPage) => {
-  //   setPage(newPage);
-  // };
-
-  // const handleChangeRowsPerPage = (event) => {
-  //   setRowsPerPage(+event.target.value);
-  //   setPage(0);
-  // };
-
   return (
     <div className="ConfigAWS">
       <Header />
@@ -100,7 +60,7 @@ export default function ConfigAWS() {
             rows={rows}
             columns={columns}
             initialState={{ pagination: { paginationModel } }}
-            pageSizeOptions={[5, 10]}
+            pageSizeOptions={[5, 10, 50, 100]}
             checkboxSelection
             sx={{ border: 0 }}
           />
