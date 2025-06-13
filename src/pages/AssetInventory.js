@@ -107,7 +107,7 @@ export default function AssetInventory() {
   const getAssets = () => {
     if (cloud === "AWS") return awsAssets;
     if (cloud === "Azure") return azureAssets;
-    return gcpAssets;
+    if (cloud === "GCP") return gcpAssets;
   };
 
   const pieData = [
@@ -136,7 +136,7 @@ export default function AssetInventory() {
       </Box>
 
       {/* Asset Cards */}
-      <Grid container spacing={3} sx={{ displat: "flex", justifyContent: "center", mt: 2 }}>
+      <Grid container spacing={3} sx={{ mt: 2 }}>
         {getAssets().map((asset, index) => (
           <Grid item xs={12} md={6} lg={4} key={index}>
             <Card variant="outlined">
@@ -160,7 +160,7 @@ export default function AssetInventory() {
       <Divider sx={{ my: 5 }} />
 
       {/* Analytics Section */}
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{ display: "flex", justifyContent: "center" }}>
         <Grid item size={4} md={6}>
           <Paper sx={{ p: 3, height: 400 }}>
             <Typography variant="h6" gutterBottom>
