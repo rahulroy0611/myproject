@@ -1,3 +1,8 @@
+:root {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+}
+
 .App {
   text-align: center;
 }
