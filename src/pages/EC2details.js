@@ -145,8 +145,8 @@ const rows = [
 ]
 const paginationModel = { page: 0, pageSize: 10 };
 
-function createData (account_id,instance_id,instance_type,instance_state,private_ip,public_ip,availability_zone,instance_name,launch_time,region,vpc_id,subnet_id,security_groups,os_name,os_version,allowd_ports,public_open_ports,metadata_version,ssm_status,eos,eol,patching_status){
-    return {account_id,instance_id,instance_type,instance_state,private_ip,public_ip,availability_zone,instance_name,launch_time,region,vpc_id,subnet_id,security_groups,os_name,os_version,allowd_ports,public_open_ports,metadata_version,ssm_status,eos,eol,patching_status};
+function createData (account_id,id,instance_type,instance_state,private_ip,public_ip,availability_zone,instance_name,launch_time,region,vpc_id,subnet_id,security_groups,os_name,os_version,allowd_ports,public_open_ports,metadata_version,ssm_status,eos,eol,patching_status){
+    return {account_id,id,instance_type,instance_state,private_ip,public_ip,availability_zone,instance_name,launch_time,region,vpc_id,subnet_id,security_groups,os_name,os_version,allowd_ports,public_open_ports,metadata_version,ssm_status,eos,eol,patching_status};
 }
 
 export default function EC2details() {
