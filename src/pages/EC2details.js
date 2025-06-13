@@ -153,7 +153,7 @@ export default function EC2details() {
     return (
         <div className="ConfigAWS">
             <Header />
-            <Box sx={{ flexGrow: 1, padding: 2 }}>
+            <Box sx={{ flexGrow: 1, paddingTop: 10, paddingBottom: 10 }}>
 
                 {/* Additional content can be added here */}
 
