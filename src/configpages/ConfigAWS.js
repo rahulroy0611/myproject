@@ -14,19 +14,21 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Switch from '@mui/material/Switch';
+import { DataGrid } from '@mui/x-data-grid';
+
 
 const columns = [
-  { id: "id", label: "Account ID", minWidth: 170, align: "left" },
-  { id: "name", label: "Organization Name", minWidth: 170, align: "left" },
-  { id: "type", label: "Account Type", minWidth: 170, align: "left" },
-  { id: "group", label: "Account Groups", minWidth: 170, align: "left" },
-  { id: "status", label: "Status", minWidth: 170, align: "left" },
-  { id: "last_modify_by", label: "Last Modified By", minWidth: 170, align: "left" },
-  { id: "account_owner", label: "Cloud Account Owner", minWidth: 170, align: "left" },
-  { id: "last_modified", label: "Last Modified", minWidth: 170, align: "left" },
-  { id: "added_on", label: "Added On", minWidth: 170, align: "left" },
-  { id: "account_enabled", label: "Cloud Account Enabled", align: "center" },
-  { id: "actions", label: "Actions", align: "center" },
+  { field: "id", headerName: "Account ID", width: 170, align: "left" },
+  { field: "name", headerName: "Organization Name", width: 170, align: "left" },
+  { field: "type", headerName: "Account Type", width: 170, align: "left" },
+  { field: "group", headerName: "Account Groups", width: 170, align: "left" },
+  { field: "status", headerName: "Status", width: 170, align: "left" },
+  { field: "last_modify_by", headerName: "Last Modified By", width: 170, align: "left" },
+  { field: "account_owner", headerName: "Cloud Account Owner", width: 170, align: "left" },
+  { field: "last_modified", headerName: "Last Modified", width: 170, align: "left" },
+  { field: "added_on", headerName: "Added On", width: 170, align: "left" },
+  { field: "account_enabled", headerName: "Cloud Account Enabled", align: "center" },
+  { field: "actions", headerName: "Actions", align: "center" },
 ];
 
 function createData(id, name, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions) {
@@ -62,18 +64,20 @@ const rows = [
   createData(8934758395, "ABC_Organization", "AWS", "Group1", "Active", "John Doe", "Jane Smith", "2023-10-01", "2023-09-15", <Switch {...label} defaultChecked />, <div><VisibilityIcon/><EditIcon/><DeleteIcon/></div>),
 ];
 
+const paginationModel = { page: 0, pageSize: 5 };
+
 export default function ConfigAWS() {
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  // const [page, setPage] = React.useState(0);
+  // const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+  // const handleChangePage = (event, newPage) => {
+  //   setPage(newPage);
+  // };
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
-  };
+  // const handleChangeRowsPerPage = (event) => {
+  //   setRowsPerPage(+event.target.value);
+  //   setPage(0);
+  // };
 
   return (
     <div className="ConfigAWS">
@@ -92,56 +96,13 @@ export default function ConfigAWS() {
         {/* Additional content can be added here */}
 
         <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 500 }}>
-            <Table stickyHeader aria-label="sticky table">
-              <TableHead>
-                <TableRow>
-                  {columns.map((column) => (
-                    <TableCell
-                      key={column.id}
-                      align={column.align}
-                      style={{ minWidth: column.minWidth }}
-                    >
-                      {column.label}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row) => {
-                    return (
-                      <TableRow
-                        hover
-                        role="checkbox"
-                        tabIndex={-1}
-                        key={row.code}
-                      >
-                        {columns.map((column) => {
-                          const value = row[column.id];
-                          return (
-                            <TableCell key={column.id} align={column.align}>
-                              {column.format && typeof value === "number"
-                                ? column.format(value)
-                                : value}
-                            </TableCell>
-                          );
-                        })}
-                      </TableRow>
-                    );
-                  })}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[10, 25, 100]}
-            component="div"
-            count={rows.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            initialState={{ pagination: { paginationModel } }}
+            pageSizeOptions={[5, 10]}
+            checkboxSelection
+            sx={{ border: 0 }}
           />
         </Paper>
       </div>
