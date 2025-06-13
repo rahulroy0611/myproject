@@ -25,8 +25,8 @@ const columns = [
   { id: "account_owner", label: "Cloud Account Owner", minWidth: 170, align: "left" },
   { id: "last_modified", label: "Last Modified", minWidth: 170, align: "left" },
   { id: "added_on", label: "Added On", minWidth: 170, align: "left" },
-  { id: "account_enabled", label: "Cloud Account Enabled", minWidth: 170, align: "left" },
-  { id: "actions", label: "Actions", minWidth: 170, align: "left" },
+  { id: "account_enabled", label: "Cloud Account Enabled", align: "center" },
+  { id: "actions", label: "Actions", align: "center" },
 ];
 
 function createData(id, name, type, group, status,last_modify_by, account_owner, last_modified, added_on, account_enabled, actions) {
