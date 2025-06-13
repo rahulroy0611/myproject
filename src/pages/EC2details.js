@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DataGrid } from '@mui/x-data-grid';
 import Header from '../includes/Header.js';
-import { Paper } from "@mui/material";
+import { Paper,Box } from "@mui/material";
 
 const columns = [
     {
@@ -145,29 +145,29 @@ const rows = [
 ]
 const paginationModel = { page: 0, pageSize: 10 };
 
-function createData (account_id,id,instance_type,instance_state,private_ip,public_ip,availability_zone,instance_name,launch_time,region,vpc_id,subnet_id,security_groups,os_name,os_version,allowd_ports,public_open_ports,metadata_version,ssm_status,eos,eol,patching_status){
-    return {account_id,id,instance_type,instance_state,private_ip,public_ip,availability_zone,instance_name,launch_time,region,vpc_id,subnet_id,security_groups,os_name,os_version,allowd_ports,public_open_ports,metadata_version,ssm_status,eos,eol,patching_status};
+function createData(account_id, id, instance_type, instance_state, private_ip, public_ip, availability_zone, instance_name, launch_time, region, vpc_id, subnet_id, security_groups, os_name, os_version, allowd_ports, public_open_ports, metadata_version, ssm_status, eos, eol, patching_status) {
+    return { account_id, id, instance_type, instance_state, private_ip, public_ip, availability_zone, instance_name, launch_time, region, vpc_id, subnet_id, security_groups, os_name, os_version, allowd_ports, public_open_ports, metadata_version, ssm_status, eos, eol, patching_status };
 }
 
 export default function EC2details() {
     return (
         <div className="ConfigAWS">
-      <Header />
-      <div style={{ padding: "10px" }}>
-        
-        {/* Additional content can be added here */}
+            <Header />
+            <Box sx={{ flexGrow: 1, padding: 2 }}>
 
-        <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            initialState={{ pagination: { paginationModel } }}
-            pageSizeOptions={[5, 10, 50, 100]}
-            checkboxSelection
-            sx={{ border: 0 }}
-          />
-        </Paper>
-      </div>
-    </div>
+                {/* Additional content can be added here */}
+
+                <Paper sx={{ width: "100%", overflow: "hidden" }}>
+                    <DataGrid
+                        rows={rows}
+                        columns={columns}
+                        initialState={{ pagination: { paginationModel } }}
+                        pageSizeOptions={[5, 10, 50, 100]}
+                        checkboxSelection
+                        sx={{ border: 0 }}
+                    />
+                </Paper>
+            </Box>
+        </div>
     );
 }
